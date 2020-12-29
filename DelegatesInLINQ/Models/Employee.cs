@@ -2,10 +2,10 @@
 {
     public class Employee
     {
-        public string Firstname { get; set; }
-        public string Lastname { get; set; }
-        public int Age { get; set; }
-        public double Salary { get; set; }
+        public string Firstname { get; }
+        public string Lastname { get; }
+        public int Age { get; }
+        public double Salary { get; }
 
         public Employee(string firstname, string lastname, int age, double salary)
         {
@@ -15,8 +15,9 @@
             Salary = salary;
         }
 
-        public Employee()
+        public override string ToString()
         {
+            return $"Name: {Firstname}, Firstname: {Lastname}, Age: {Age}, Salary {Salary}";
         }
     }
 }
